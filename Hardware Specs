@@ -65,9 +65,12 @@ Q5) Should I use network attached storage for machine learning and AI?
 Network attached storage is another consideration. It’s become more common for workstation motherboards to have 10Gb Ethernet ports, allowing for network storage connections with reasonably good performance 
 without the need for more specialized networking add-ons.
 
-
+Q6) Do more CPU cores make machine learning & AI faster?
+The number of cores chosen will depend on the expected load for non-GPU tasks. As a rule of thumb, at least 4 cores for each GPU accelerator is recommended. However, if your workload has a significant CPU compute component then 32 or even 64 cores
+could be ideal. In any case, a 16-core processor would generally be considered minimal for this type of workstation.
 
 References:
 1) https://www.einfochips.com/blog/everything-you-need-to-know-about-hardware-requirements-for-machine-learning/
 2) https://www.pugetsystems.com/solutions/scientific-computing-workstations/machine-learning-ai/hardware-recommendations/
-3) 
+3) https://timdettmers.com/2018/12/16/deep-learning-hardware-guide/
+4) https://timdettmers.com/2023/01/30/which-gpu-for-deep-learning/
