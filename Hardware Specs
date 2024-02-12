@@ -1,0 +1,36 @@
+# System specifications for a deep learning/machine learning project:
+
+With a variety of CPUs, GPUs, TPUs, and ASICs, choosing the right hardware may get a little confusing. Most common deep learning libraries take advantage of multi-threading, gpu based parallelization.
+1) Processing power:
+2) Hardware compatibility:
+3) Power efficiency:
+4) Thermal management:
+5) Number of Cores and Threads: 
+
+a)
+# At my company we run backpropagation (which is the computationally demanding part of machine learning) on everything
+# from $3000 Dell Precision M6800 laptops with 8 CPU cores, 24GB ram, and 1500 GPU cores, to $8000 servers with 32 CPU cores, 128GB ram and 5000 GPU cores.
+
+b) Nvidia DGX-1: offers more versatility and flexibility in terms of its hardware and software configurations. It also offers more memory and storage capacity, which could be particularly useful for large-scale research projects.
+c) Google Colab offers 12 GB RAM and 107 GB HDD online
+
+If your tasks are small and can fit in a complex sequential processing, you don’t need a big system. You could even skip the GPUs altogether. A CPU such as i7–7500U can train an average of ~115 examples/second. However,if 
+your task is a bit intensive, and has a manageable data, a reasonably powerful GPU would be a better choice for you. Nvidia GTX 1080 (8 GB VRAM), can train an average of ~14k examples/second. 
+
+Furthermore, a GPU can perform convolutional/CNN or recurrent neural networks/RNN based operations. It can also perform operations on a batch of images of 128 or 256 images at once in just a few milliseconds. 
+However, the power consumption is around ~250 W and requires a full PC that additionally requires 150 W of power, which leads to a total of 400W.
+
+Here are some key insights into these hardware trends:
+
+a) Specialized Accelerators: Machine learning workloads are becoming increasingly complex, demanding specialized hardware accelerators like Graphics Processing Units (GPUs) and Tensor Processing Units (TPUs). 
+These chips are designed to handle the massive matrix operations inherent to deep learning models, dramatically speeding up training and inference tasks.
+
+b) Edge AI:  This trend reduces latency, enhances privacy, and allows for real-time processing in applications like autonomous vehicles, IoT devices, and smartphones. 
+Hardware designs are adapting to support power-efficient AI inference at the edge.
+
+c) Custom Hardware: As machine learning models become increasingly diverse, custom hardware solutions are emerging. Companies are developing Application-Specific Integrated Circuits (ASICs)
+tailored for specific deep learning tasks, achieving higher performance and energy efficiency.
+
+d) Memory and Storage: Machine learning models are getting larger, requiring more memory and storage capacity. High-bandwidth memory (HBM) and solid-state drives (SSDs) 
+are becoming critical for training and running these models efficiently.
+
