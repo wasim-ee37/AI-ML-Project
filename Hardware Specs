@@ -1,6 +1,10 @@
 # System specifications for a deep learning/machine learning project:
 
-With a variety of CPUs, GPUs, TPUs, and ASICs, choosing the right hardware may get a little confusing. Most common deep learning libraries take advantage of multi-threading, gpu based parallelization.
+With a variety of CPUs, GPUs, TPUs, and ASICs, choosing the right hardware may get a little confusing. Most common deep learning libraries take advantage of multi-threading, gpu based parallelization. 
+There are many types of Machine Learning and Artificial Intelligence applications – from traditional regression models, non-neural network classifiers, and statistical models that are represented by capabilities 
+in Python SciKitLearn and the R language, up to Deep Learning models using frameworks like PyTorch and TensorFlow. Within these different types of ML/AI models there can be significant variety as well. 
+The “best” hardware will follow some standard patterns, but your specific application may have unique optimal requirements.
+
 1) Processing power:
 2) Hardware compatibility:
 3) Power efficiency:
@@ -20,6 +24,10 @@ your task is a bit intensive, and has a manageable data, a reasonably powerful G
 Furthermore, a GPU can perform convolutional/CNN or recurrent neural networks/RNN based operations. It can also perform operations on a batch of images of 128 or 256 images at once in just a few milliseconds. 
 However, the power consumption is around ~250 W and requires a full PC that additionally requires 150 W of power, which leads to a total of 400W.
 
+Do more CPU cores make machine learning & AI faster?
+The number of cores chosen will depend on the expected load for non-GPU tasks. As a rule of thumb, at least 4 cores for each GPU accelerator is recommended. However, if your workload has a significant CPU compute component,
+then 32 or even 64 cores could be ideal. In any case, a 16-core processor would generally be considered minimal for this type of workstation.
+
 Here are some key insights into these hardware trends:
 
 a) Specialized Accelerators: Machine learning workloads are becoming increasingly complex, demanding specialized hardware accelerators like Graphics Processing Units (GPUs) and Tensor Processing Units (TPUs). 
@@ -34,3 +42,32 @@ tailored for specific deep learning tasks, achieving higher performance and ener
 d) Memory and Storage: Machine learning models are getting larger, requiring more memory and storage capacity. High-bandwidth memory (HBM) and solid-state drives (SSDs) 
 are becoming critical for training and running these models efficiently.
 
+Q1) What video graphic cards are recommended for machine learning and AI?
+“Professional” NVIDIA GPUs like the RTX A5000 and A6000 are high quality, tend to have more onboard memory, and work well in multi-GPU configurations. 
+The RTX A6000 in particular, with its 48GB VRAM, is recommended for work with data that has “large feature size” such as higher resolution images, 3D images, etc.
+
+Q2) How much VRAM (video memory) does machine learning and AI need?
+Memory capacity on GPUs has been limited and ML models and frameworks have been constrained by available VRAM. This is why it’s common to do “data and feature reduction” prior to training. 
+For example, images for training data are usually of low resolution since the number of pixels becomes a limiting critical feature dimension. 
+8GB of memory per GPU is considered minimal and could definitely be a limitation for lots of applications. 12 to 24GB is fairly common, and readily available on high-end video cards. 
+For larger data problems, the 48GB available on the NVIDIA RTX A6000 may be necessary – but it is not commonly needed.
+
+Q3) Will multiple GPUs improve performance in machine learning and AI?
+A single GPU like the NVIDIA RTX 3090 or A5000 can provide significant performance and may be enough for your application. Having 2, 3, or even 4 GPUs in a workstation can provide a surprising amount of compute capability
+and may be sufficient for even many large problems. It is also recommended to have at least two GPUs when doing development work to enable local testing of multi-GPU functionality and scaling.
+
+Q4) How much RAM does machine learning and AI need?
+The first rule of thumb is to have at least double the amount of CPU memory as there is total GPU memory in the system. For example, a system with 2x GeForce RTX 3090 GPUs would have 48GB of total VRAM – so the system should be configured
+with 128GB (96GB would be double, but 128GB is usually the closest configurable amount). The second consideration is how much data analysis will be needed. It is often necessary (or at least desirable) to be able to pull a full data set
+into memory for processing and statistical work. This is one of the reasons we advise using workstation and server-grade processors: they support substantially more system memory than consumer chips.
+
+Q5) Should I use network attached storage for machine learning and AI?
+Network attached storage is another consideration. It’s become more common for workstation motherboards to have 10Gb Ethernet ports, allowing for network storage connections with reasonably good performance 
+without the need for more specialized networking add-ons.
+
+
+
+References:
+1) https://www.einfochips.com/blog/everything-you-need-to-know-about-hardware-requirements-for-machine-learning/
+2) https://www.pugetsystems.com/solutions/scientific-computing-workstations/machine-learning-ai/hardware-recommendations/
+3) 
